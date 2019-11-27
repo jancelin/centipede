@@ -1,8 +1,8 @@
 ## 4 Calcul de la position de la base
 
-Il est necessaire maintenant de déterminer la position de la base le plus précisement possible.
+Il est nécessaire maintenant de déterminer la position de la base le plus précisement possible.
 
-Votre base va servir de référentiel pour vous mais aussi pour toute personne se trouvant dans sa zone d'action. il est primordial que sa postion soit juste et très précise afin de pourvoir tous travailler sur un même référentiel géographique.
+Votre base va servir de référentiel pour vous mais aussi pour toute personne se trouvant dans sa zone d'action. Il est primordial que sa postion soit juste et très précise afin de pourvoir tous travailler sur un même référentiel géographique.
 
 **Pour les utilisateurs de bases RTK F9P + Raspberry Pi**: [Télécharger](https://github.com/jancelin/rtkbase/wiki/3.-Param%C3%A9trage#param%C3%A9trage) le UBX.zip de votre choix sur votre Base (http://centipede.local:8000), décompresser le et rendez-vous à [cette étape](https://jancelin.github.io/centipede/4_positionnement.html#43-r%C3%A9cup%C3%A9rer-les-donn%C3%A9es-du-rgp)
 
@@ -30,11 +30,16 @@ Plusieurs méthodes de post-traitements existent, et ce sont les conditions loca
 
 ### 4.3 Récupérer les données du RGP
 
-* Aller sur le [site IGN](http://rgp.ign.fr/DONNEES/diffusion){:target="_blank"}
+* Aller sur le [site IGN](http://rgp.ign.fr/DONNEES/diffusion)
+
+![ign](images/IGN_RGP.jpg)
 
 * Zoomer large sur votre zone (50km)
 
 * Sélectionner TU (Temps Universel)
+
+![ign](images/ign_rgp_tu.png)
+
 
 * Changer la date de début et de fin en fonction du nom de votre fichier téléchargé précédement, et changer l'heure ```0 à 24h```
 
@@ -44,6 +49,8 @@ Plusieurs méthodes de post-traitements existent, et ce sont les conditions loca
 
 * Version Rinex : 2.11
 
+![ign](images/ign_rgp_types.png)
+
 * Il faut ensuite sélectionner la base souhaitée sur la carte à l'aide de l'outil de sélection puis l'ajouter au panier.
 
 * Télécharger l'archive au format ZIP une fois celle-ci disponible.
@@ -52,11 +59,12 @@ Plusieurs méthodes de post-traitements existent, et ce sont les conditions loca
 
 * Réunir les 2 fichiers (UBX + Rinex) dans un même répertoire.
 
-> [Pour en savoir plus sur les formats UBX et Rinex](https://en.wikipedia.org/wiki/RINEX){:target="_blank"}
+> [Pour en savoir plus sur les formats UBX et Rinex](https://en.wikipedia.org/wiki/RINEX)
 
 ### 4.4 Calcul de la correction
 
-Télécharger la version d'RTKLIB fournie par EMLID (RTKLib for Reach RS2): [docs.emlid.com](https://docs.emlid.com/reachm-plus/common/tutorials/gps-post-processing/){:target="_blank"}
+Télécharger la version d'RTKLIB fournie par EMLID (RTKLib for Reach RS2): [docs.emlid.com](https://docs.emlid.com/reachm-plus/common/tutorials/gps-post-processing/)
+
 
 #### 4.4.1 RTKCONV
 
@@ -165,7 +173,7 @@ La deuxième avec ces mêmes fichiers + les fichiers de l'IGS récupérés 20 jo
  
  Le fichier résultat peut être exploité dans QGIS3.
  
- > Plus d'informations sur l'installation de ce logiciel sur cette [page](https://qgis.org/fr/site/){:target="_blank"}
+ > Plus d'informations sur l'installation de ce logiciel sur cette [page](https://qgis.org/fr/site/)
  
    - Cliquer sur *couche* > *Ajouter une couche* > *Ajouter une couche de texte délimité*
    - Choisir le fichier .pos puis cliquer sur *Ouvrir*
@@ -253,6 +261,6 @@ Modifier les valeurs suivantes (en se basant sur les paramètres enregistrés da
    - Indiquer le mot de passe: centipede
    - Choisir/Indiquer le nom du Mount point
    
-> Votre base est immédiatement opérationnelle mais n'apparaitra sur la [carte](https://centipede.fr/index.php/view/map/?repository=centipede&project=centipede){:target="_blank"} et bénificiera des options du service (mail d'alerte en cas de déconnection, visibilité de sa position et de son état) seulement après validation par l'administrateur.
+> Votre base est immédiatement opérationnelle mais n'apparaitra sur la [carte](https://centipede.fr/index.php/view/map/?repository=centipede&project=centipede) et bénificiera des options du service (mail d'alerte en cas de déconnection, visibilité de sa position et de son état) seulement après validation par l'administrateur.
 
 ------------------------------------------------------------
